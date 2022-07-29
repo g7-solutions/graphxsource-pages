@@ -1,0 +1,484 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  --gradientB: #1B2335;
+  --gradientA: #080D17;
+  --accentcolor: #466DCC;
+  --graytext: #cccdcf;
+  --darkcolor: #131313;
+}
+
+body {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page-transition .curtain {
+  position: absolute;
+  z-index: 100;
+  background-color: #fff;
+  height: 100%;
+  width: 100vw;
+  -webkit-clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+          clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+}
+
+/* LINK HOVER ANIMATION*/
+.effect-underline:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  height: 1em;
+  width: 100%;
+  border-bottom: 3px solid;
+  margin-top: 10px;
+  opacity: 0;
+  transition: opacity 0.35s, transform 0.35s ease-in-out;
+  transform: scale(0, 1);
+}
+
+.effect-underline:hover:after {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* LINK HOVER ANIMATION END*/
+.header-col {
+  background: rgb(8, 13, 23);
+  background: linear-gradient(45deg, rgb(8, 13, 23) 0%, rgb(27, 35, 53) 100%);
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+.header-col .gxs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 15%;
+}
+.header-col .gxs .gxs-logo {
+  max-width: 150px;
+}
+.header-col .team-name {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70%;
+  padding: 50% 0;
+}
+.header-col .team-name .overlaps {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-90deg);
+}
+.header-col .team-name .overlaps p:nth-child(1) {
+  font-family: "Zapfino Extra LT Pro";
+  font-weight: lighter;
+  font-size: 7vw;
+  color: #fff;
+  width: 100%;
+  text-align: center;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  padding: 0;
+  margin: 0;
+  position: relative;
+}
+.header-col .team-name .overlaps p:nth-child(2) {
+  line-height: 2.5;
+  font-weight: 600;
+  font-family: "Argentum Sans ExtraBold";
+  font-size: 2.5vw;
+  letter-spacing: 1vw;
+  color: var(--accentcolor);
+  text-shadow: 0px -20px 40px #000;
+  position: absolute;
+  margin-top: 2.5vw;
+  padding: 0;
+}
+.header-col .extra {
+  width: 100%;
+  height: 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid var(--graytext);
+}
+.header-col .extra p {
+  font-family: "Argentum Sans ExtraBold";
+  font-size: 0.9rem;
+  color: var(--graytext);
+  text-align: center;
+}
+
+.image-col {
+  background-image: url("/img/dragon-mockup.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 55%;
+  display: flex;
+}
+.image-col .image-zoom {
+  background-repeat: no-repeat;
+  background-size: 300%;
+  background-image: url("/img/dragon-vector.jpg");
+  background-position: 35% 30%;
+  width: 8vw;
+  height: 8vw;
+  transform: translateX(14vw) translateY(55vh);
+  box-shadow: 0 50px 90px #000;
+  transition: background-size 0.3s ease-in-out;
+}
+.image-col .image-zoom:hover {
+  background-size: 500%;
+}
+.image-col .badge {
+  background-color: var(--darkcolor);
+  background-image: url("/img/badge-text.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  bottom: 90px;
+  margin-left: -50px;
+  -webkit-clip-path: circle(50% at 50% 50%);
+          clip-path: circle(50% at 50% 50%);
+}
+
+.text-col {
+  background-color: #fff;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.text-col .menu ul {
+  padding: 40px 0;
+  display: flex;
+  justify-content: center;
+}
+.text-col .menu ul li {
+  text-decoration: none;
+  list-style: none;
+  margin-right: 20px;
+  align-items: center;
+}
+.text-col .menu ul li a {
+  color: var(--gradientB);
+  text-decoration: none;
+  font-family: "Argentum Sans ExtraBold", sans-serif;
+  text-transform: uppercase;
+  align-items: center;
+  position: relative;
+}
+.text-col .menu ul li a img {
+  height: 18px;
+}
+.text-col .decoration p {
+  font-family: "Argentum Sans ExtraBold", sans-serif;
+  font-size: 12em;
+  color: rgba(255, 255, 255, 0);
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-image: url("/img/dragon-mockup.png");
+  background-position: 115% 28%;
+  background-size: 300%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  margin-left: -60px;
+}
+.text-col .decoration p::before {
+  content: "06";
+  font-family: "Argentum Sans ExtraBold", sans-serif;
+  font-size: 1em;
+  color: #fff;
+  position: absolute;
+  -webkit-clip-path: polygon(0 0, 25% 0, 25% 100%, 0 100%);
+          clip-path: polygon(0 0, 25% 0, 25% 100%, 0 100%);
+}
+.text-col .description {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+.text-col .description h2 {
+  font-family: "Argentum Sans SemiBold", sans-serif;
+  font-size: 2rem;
+  color: var(--gradientA);
+  width: 100%;
+  text-align: left;
+  margin-bottom: 1.5rem;
+}
+.text-col .description p {
+  font-family: "Argentum Sans Light", sans-serif;
+  font-size: 0.8rem;
+  line-height: 1.3rem;
+  color: var(--graytext);
+  text-align: left;
+  margin-bottom: 5rem;
+}
+.text-col .description a {
+  background-color: #fff;
+  font-family: "Argentum Sans ExtraBold", sans-serif;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--gradientA);
+  text-align: center;
+  width: 100%;
+  padding: 1.5rem 5rem;
+  outline: 1px solid var(--graytext);
+  transition: all 0.2s ease-in-out;
+}
+.text-col .description a:hover {
+  background-color: var(--accentcolor);
+  color: #fff;
+  outline: var(--accentcolor);
+}
+
+.logos-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  opacity: 0;
+}
+.logos-wrapper .logos-header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50%;
+  background-image: url("/img/dragon-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  border-right: 2px solid var(--graytext);
+}
+.logos-wrapper .logos-header .dragon-logo {
+  width: 100%;
+  height: 20%;
+  padding: 30px 0 30px 60px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+.logos-wrapper .logos-header .dragon-logo img {
+  cursor: pointer;
+  max-height: 50px;
+}
+.logos-wrapper .logos-header .logos-header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70%;
+}
+.logos-wrapper .logos-header .logos-header-content .header-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
+  width: 100%;
+}
+.logos-wrapper .logos-header .logos-header-content .header-info h1 {
+  font-family: "Argentum Sans ExtraBold";
+  font-size: 5em;
+  color: var(--gradientA);
+  margin-bottom: 20px;
+}
+.logos-wrapper .logos-header .logos-header-content .header-info .quote {
+  display: flex;
+  flex-direction: row;
+}
+.logos-wrapper .logos-header .logos-header-content .header-info .quote span {
+  height: 2px;
+  width: 25px;
+  background-color: var(--gradientA);
+  margin: 10px 10px 0 0;
+}
+.logos-wrapper .logos-header .logos-header-content .header-info .quote p {
+  font-family: "Argentum Sans Light";
+  font-weight: 600;
+  font-size: 1em;
+  font-style: italic;
+  color: var(--gradientA);
+}
+.logos-wrapper .logos-header .logos-header-content .instructions {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.logos-wrapper .logos-header .logos-header-content .instructions img {
+  max-height: 30px;
+  margin-right: 10px;
+}
+.logos-wrapper .logos-header .logos-header-content .instructions p {
+  font-family: "Argentum Sans Light";
+  font-weight: 600;
+  font-size: 1rem;
+  color: var(--gradientA);
+  max-width: 35%;
+}
+.logos-wrapper .logos-header .logos-footer {
+  height: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logos-wrapper .logos-header .logos-footer p {
+  font-family: "Argentum Sans Light";
+  font-weight: 600;
+  text-transform: uppercase;
+  color: var(--graytext);
+  text-align: center;
+}
+.logos-wrapper .logos-container {
+  display: flex;
+  overflow: auto;
+  box-sizing: border-box;
+  height: 100%;
+  width: 50%;
+}
+.logos-wrapper .logos-container .blank-logo {
+  background-color: #fff;
+  height: 300px;
+  position: relative;
+}
+.logos-wrapper .logos-container .blank-logo p:nth-child(1) {
+  font-family: "Argentum Sans ExtraBold";
+  font-size: 1rem;
+  color: var(--gradientA);
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}
+.logos-wrapper .logos-container .blank-logo p:nth-child(2) {
+  font-family: "Argentum Sans ExtraBold";
+  font-size: 5rem;
+  line-height: 5rem;
+  color: var(--graytext);
+  position: absolute;
+  bottom: 0.3rem;
+  right: 1rem;
+}
+.logos-wrapper .logos-container .logo {
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.3s ease-in-out;
+  filter: saturate(0);
+}
+.logos-wrapper .logos-container .logo:hover {
+  filter: saturate(1);
+}
+.logos-wrapper .logos-container a {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.logos-wrapper .logos-container .col-1 {
+  display: block;
+  width: 50%;
+}
+.logos-wrapper .logos-container .col-1 .logo:nth-child(2) {
+  background: #0f0c29;
+  background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
+}
+.logos-wrapper .logos-container .col-1 .logo:nth-child(2) img {
+  height: 90%;
+}
+.logos-wrapper .logos-container .col-1 .logo:nth-child(4) {
+  background: #ADD100;
+  /* fallback for old browsers */
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #7B920A, #ADD100);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+.logos-wrapper .logos-container .col-1 .logo:nth-child(4) img {
+  height: 80%;
+}
+.logos-wrapper .logos-container .col-2 {
+  display: block;
+  width: 50%;
+}
+.logos-wrapper .logos-container .col-2 .logo:nth-child(3) {
+  background: #000428;
+  background: linear-gradient(180deg, #004e92, #000428);
+}
+.logos-wrapper .logos-container .col-2 .logo:nth-child(3) img {
+  height: 80%;
+}
+.logos-wrapper .logos-container .col-2 .logo:nth-child(5) {
+  background: #00c6ff;
+  background: linear-gradient(to right, #0072ff, #00c6ff);
+}
+.logos-wrapper .logos-container .col-2 .logo:nth-child(5) img {
+  height: 70%;
+}
+.logos-wrapper .logos-container .col-2 .blank-logo:nth-child(1) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #e43a15;
+  background: linear-gradient(to right, #e65245, #e43a15);
+}
+.logos-wrapper .logos-container .col-2 .blank-logo:nth-child(1) p {
+  text-transform: uppercase;
+  font-size: 1rem;
+  color: #fff;
+  position: initial;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(100px);
+  }
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+  30% {
+    transform: translateY(100px);
+  }
+}
+svg #wheel {
+  -webkit-animation: scroll ease 1.5s infinite;
+          animation: scroll ease 1.5s infinite;
+}/*# sourceMappingURL=styles.css.map */

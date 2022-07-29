@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+    <div class="page-transition">
+        <div class="curtain">
+            <div class="logos-wrapper">
+
+                <div class="logos-header">
+                    <div class="dragon-logo">
+                       <img id="dragonlogo" src="/img/dragon-icon.png" alt="Team 06">
+                    </div>
+
+                    <div class="logos-header-content">
+                        <div class="header-info">
+                            <h1>Work.</h1>
+                            <div class="quote">
+                                <span></span>
+                                <p>You can't use up creativity. <br>
+                                    The more you use, <br>
+                                    The more you have.
+                                </p>
+                            </div>
+                        </div>
+                       
+                        <div class="instructions">
+                            <img src="/img/info-icon.png" alt="Instructions">
+                            <p>Open an image and move the slider to reveal
+                                the results before & after.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="logos-footer">
+                        <p>Embroidery Team</p>
+                    </div>
+                </div>
+
+                <div class="logos-container">
+                    <div class="col-1">
+                        <div class="blank-logo">
+                            <p>Wolf</p>
+                            <p>01</p>
+                        </div>
+                        <div class="logo"><a href=""><img src="/img/wolf.png" alt=""></a></div>
+                        <div class="blank-logo">
+                            <p>The Grizzly</p>
+                            <p>03</p>
+                        </div>
+                        <div class="logo"><a href=""><img src="/img/grizzly.png" alt=""></a></div>
+                        <div class="blank-logo">
+                            <p>Hagerty Huskies</p>
+                            <p>05</p>
+                        </div>
+                    </div>
+
+                    <div class="col-2">
+                        <div class="blank-logo">
+                            <svg width="40px" viewBox="0 0 247 390" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+                                <path id="wheel" d="M123.359,79.775l0,72.843" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+                                <path id="mouse" d="M236.717,123.359c0,-62.565 -50.794,-113.359 -113.358,-113.359c-62.565,0 -113.359,50.794 -113.359,113.359l0,143.237c0,62.565 50.794,113.359 113.359,113.359c62.564,0 113.358,-50.794 113.358,-113.359l0,-143.237Z" style="fill:none;stroke:#fff;stroke-width:20px;"/>
+                            </svg>
+                            <p>Scroll Down!</p>
+                        </div>
+                        <div class="blank-logo">
+                            <p>Staff of Discord</p>
+                            <p>02</p>
+                        </div>
+                        <div class="logo"><a href="#"><img src="/img/discord.png" alt=""></a></div>
+                        <div class="blank-logo">
+                            <p>Valley Christian Warriors</p>
+                            <p>04</p>
+                        </div>
+                        <div class="logo"><a href=""><img src="/img/warriors.png" alt=""></a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="header-col">
+        <div class="gxs">
+            <a href="https://graphxsource.com"><img src="/img/gxs-logo-white.png" alt="Graphxsource"
+                    class="gxs-logo"></a>
+        </div>
+
+        <div class="team-name">
+            <div class="overlaps">
+                <p>Embroidery</p>
+                <p>TEAM</p>
+            </div>
+        </div>
+
+        <div class="extra">
+            <p>INTERACTIVE DEMO</p>
+        </div>
+    </div>
+
+    <div class="image-col">
+        <div class="image-zoom"></div>
+        <div class="badge"></div>
+    </div>
+
+    <div class="text-col">
+        <div class="menu">
+            <ul>
+                <li><a class="effect-underline" href="#">About</a></li>
+                <li><a class="effect-underline" href="#">Contact</a></li>
+                <li><a href="#"><img src="/img/menu.png" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="decoration">
+            <p>06</p>
+        </div>
+        <div class="description">
+            <h2>Carefully Crafted.</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Magni qui incidunt eos, ipsa nisi impedit, eius sit blanditiis nemo
+                placeat nobis consequuntur, ex quam recusandae repudiandae quaerat at
+                dolorum quisquam!</p>
+            <a id="cta" href="#">Try it out</a>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="/scripts.js"></script>
+    <script>
+        var tl = new TimelineMax({ paused: true });
+        document.getElementById('cta').addEventListener('click', function () {
+            tl.to('.curtain', 1.5, { clipPath: "polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%)", ease: Expo.easeInOut }, 0)
+            .to('.logos-wrapper', 0.5, { opacity: 1, ease: Expo.easeInOut }, 1.5)
+            .play();
+        });
+        document.getElementById('dragonlogo').addEventListener('click', function(){
+            tl.reverse();
+        });
+    </script>
+</body>
+
+</html>
