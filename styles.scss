@@ -21,6 +21,22 @@ body {
     overflow: hidden;
 }
 
+@font-face {
+    font-family: A-ExtraBold;
+    src: url("/fonts/ArgentumSans-ExtraBold.ttf");
+}
+
+@font-face {
+    font-family: A-Light;
+    src: url("/fonts/ArgentumSans-Light.ttf");
+}
+
+@font-face {
+    font-family: Zapfino;
+    src: url("/fonts/ZapfinoExtraLTPro.otf");
+}
+
+
 .page-transition .curtain {
     position: absolute;
     z-index: 100;
@@ -94,7 +110,7 @@ body {
 
             p {
                 &:nth-child(1) {
-                    font-family: "Zapfino Extra LT Pro";
+                    font-family: Zapfino;
                     font-weight: lighter;
                     font-size: 7vw;
                     color: #fff;
@@ -109,7 +125,7 @@ body {
                 &:nth-child(2) {
                     line-height: 2.5;
                     font-weight: 600;
-                    font-family: "Argentum Sans ExtraBold";
+                    font-family: A-ExtraBold;
                     font-size: 2.5vw;
                     letter-spacing: 1vw;
                     color: var(--accentcolor);
@@ -132,7 +148,7 @@ body {
         border-top: 1px solid var(--graytext);
 
         p {
-            font-family: "Argentum Sans ExtraBold";
+            font-family: A-ExtraBold;
             font-size: 0.9rem;
             color: var(--graytext);
             text-align: center;
@@ -202,7 +218,7 @@ body {
                 a {
                     color: var(--gradientB);
                     text-decoration: none;
-                    font-family: "Argentum Sans ExtraBold", sans-serif;
+                    font-family: A-ExtraBold, sans-serif;
                     text-transform: uppercase;
                     align-items: center;
                     position: relative;
@@ -217,7 +233,7 @@ body {
 
     .decoration {
         p {
-            font-family: "Argentum Sans ExtraBold", sans-serif;
+            font-family: A-ExtraBold, sans-serif;
             font-size: 12em;
             color: rgba($color: #ffffff, $alpha: 0.0);
             background-color: #fff;
@@ -230,7 +246,7 @@ body {
 
             &::before {
                 content: "06";
-                font-family: "Argentum Sans ExtraBold", sans-serif;
+                font-family: A-ExtraBold, sans-serif;
                 font-size: 1em;
                 color: #fff;
                 position: absolute;
@@ -247,7 +263,7 @@ body {
         align-items: center;
 
         h2 {
-            font-family: "Argentum Sans SemiBold", sans-serif;
+            font-family: A-ExtraBold, sans-serif;
             font-size: 2rem;
             color: var(--gradientA);
             width: 100%;
@@ -256,7 +272,7 @@ body {
         }
 
         p {
-            font-family: "Argentum Sans Light", sans-serif;
+            font-family: A-Light, sans-serif;
             font-size: 0.8rem;
             line-height: 1.3rem;
             color: var(--graytext);
@@ -266,7 +282,7 @@ body {
 
         a {
             background-color: #fff;
-            font-family: "Argentum Sans ExtraBold", sans-serif;
+            font-family: A-ExtraBold, sans-serif;
             font-size: 1rem;
             text-transform: uppercase;
             text-decoration: none;
@@ -333,7 +349,7 @@ body {
                 width: 100%;
 
                 h1 {
-                    font-family: 'Argentum Sans ExtraBold';
+                    font-family: A-ExtraBold;
                     font-size: 5em;
                     color: var(--gradientA);
                     margin-bottom: 20px;
@@ -351,7 +367,7 @@ body {
                     }
 
                     p {
-                        font-family: 'Argentum Sans Light';
+                        font-family: A-Light;
                         font-weight: 600;
                         font-size: 1em;
                         font-style: italic;
@@ -375,7 +391,7 @@ body {
                 }
 
                 p {
-                    font-family: 'Argentum Sans Light';
+                    font-family: A-Light;
                     font-weight: 600;
                     font-size: 1rem;
                     color: var(--gradientA);
@@ -392,7 +408,7 @@ body {
             align-items: center;
 
             p {
-                font-family: 'Argentum Sans Light';
+                font-family: A-Light;
                 font-weight: 600;
                 text-transform: uppercase;
                 color: var(--graytext);
@@ -415,7 +431,7 @@ body {
 
             p {
                 &:nth-child(1) {
-                    font-family: 'Argentum Sans ExtraBold';
+                    font-family: A-ExtraBold;
                     font-size: 1rem;
                     color: var(--gradientA);
                     position: absolute;
@@ -424,7 +440,7 @@ body {
                 }
 
                 &:nth-child(2) {
-                    font-family: 'Argentum Sans ExtraBold';
+                    font-family: A-ExtraBold;
                     font-size: 5rem;
                     line-height: 5rem;
                     color: var(--graytext);
