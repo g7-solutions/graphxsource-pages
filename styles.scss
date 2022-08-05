@@ -10,7 +10,7 @@
     --gradientB: #1B2335;
     --gradientA: #080D17;
     --accentcolor: #466DCC;
-    --graytext: #cccdcf;
+    --graytext: #aaaaaa;
     --darkcolor: #131313;
 }
 
@@ -88,7 +88,7 @@ body {
         height: 15%;
 
         .gxs-logo {
-            max-width: 150px;
+            max-width: 200px;
         }
     }
 
@@ -128,7 +128,7 @@ body {
                     font-weight: 600;
                     font-family: A-ExtraBold;
                     font-size: 2.5vw;
-                    letter-spacing: 1vw;
+                    letter-spacing: 0.5vw;
                     color: var(--accentcolor);
                     text-shadow: 0px -20px 40px #000;
                     position: absolute;
@@ -143,6 +143,7 @@ body {
         width: 100%;
         height: 15%;
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
 
@@ -153,7 +154,26 @@ body {
             font-size: 0.9rem;
             color: var(--graytext);
             text-align: center;
+            margin-bottom: 0.5rem;
+            &:nth-child(1){
+                animation: pulse 800ms ease-in-out infinite alternate;
+            }
+
+            &:nth-child(2){
+                font-family: A-Light;
+                font-style: italic;
+                font-size: 0.7rem;
+            }
         }
+    }
+}
+
+@keyframes pulse{
+    0%{
+        filter: brightness(1.2)
+    }
+    100%{
+        filter: brightness(0.7);
     }
 }
 
@@ -236,12 +256,8 @@ body {
         p {
             font-family: A-ExtraBold, sans-serif;
             font-size: 12em;
-            color: rgba($color: #ffffff, $alpha: 0.0);
+            color: rgb(189, 41, 41);
             background-color: #fff;
-            background-repeat: no-repeat;
-            background-image: url('/img/dragon-mockup.png');
-            background-position: 115% 28%;
-            background-size: 300%;
             background-clip: text;
             margin-left: -60px;
 
@@ -249,7 +265,7 @@ body {
                 content: "06";
                 font-family: A-ExtraBold, sans-serif;
                 font-size: 1em;
-                color: #fff;
+                color: rgb(126, 40, 40);
                 position: absolute;
                 clip-path: polygon(0 0, 25% 0, 25% 100%, 0 100%);
             }
@@ -588,7 +604,7 @@ body {
 .preview-box {
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 25%;
     transform: translate(-50%, -50%) scale(0.9);
     background: #fff;
     max-width: 700px;
@@ -611,11 +627,11 @@ body {
         z-index: 201;
 
         .icon {
-            color: var(--gradientA);
+            color: #fff;
             font-family: A-ExtraBold, sans-serif;
             font-size: 20px;
             cursor: pointer;
-            opacity: 0.2;
+            opacity: 0.8;
             transition: opacity 0.3s ease;
             &:hover{
                 opacity: 1;
@@ -653,6 +669,7 @@ body {
         opacity: 0.9;
         pointer-events: auto;
         cursor: pointer;
+        filter: invert(1);
     }
 
     .scroller:hover {
