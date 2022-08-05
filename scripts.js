@@ -11,6 +11,7 @@ window.onload = () => {
 
         gallery[i].onclick = () => {
             clickedImgIndex = i;
+            scrollIt(0);
             function preview() {
                 let vectorImage = gallery[newIndex].querySelector("img").getAttribute("data-vector");
                 let embroideryImage = gallery[newIndex].querySelector("img").getAttribute("data-embroidery");
@@ -75,7 +76,7 @@ function scrollIt(x){
 
 // Let's set our opening state based off the width, 
 // we want to show a bit of both images so the user can see what's going on
-scrollIt(150);
+scrollIt(0);
 
 // And finally let's repeat the process for touch events
 // first our middle scroller...
