@@ -765,8 +765,8 @@ svg #wheel {
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     overflow: hidden;
   }
-  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .before,
-.logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .after {
+  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-before,
+.logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-after {
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -778,11 +778,11 @@ svg #wheel {
     pointer-events: none;
     overflow: hidden;
   }
-  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .before .content-image,
-.logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .after .content-image {
+  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-before .m-content-image,
+.logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-after .m-content-image {
     height: 100%;
   }
-  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .scroller {
+  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-scroller {
     width: 50px;
     height: 50px;
     position: absolute;
@@ -796,21 +796,21 @@ svg #wheel {
     cursor: pointer;
     filter: invert(1);
   }
-  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .scroller:hover {
+  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-scroller:hover {
     opacity: 1;
   }
-  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .scrolling {
+  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-scrolling {
     pointer-events: none;
     opacity: 1;
     z-index: 1;
   }
-  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .scroller__thumb {
+  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-scroller__thumb {
     width: 100%;
     height: 100%;
     padding: 5px;
   }
-  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .scroller:before,
-.logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .scroller:after {
+  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-scroller:before,
+.logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-scroller:after {
     content: " ";
     display: block;
     width: 7px;
@@ -821,17 +821,17 @@ svg #wheel {
     z-index: 30;
     transition: 0.1s;
   }
-  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .scroller:before {
+  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-scroller:before {
     top: 100%;
   }
-  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .scroller:after {
+  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-scroller:after {
     bottom: 100%;
   }
-  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .scroller {
+  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-scroller {
     border: 5px solid rgb(0, 0, 0);
   }
-  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .scroller:before,
-.logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .scroller:after {
+  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-scroller:before,
+.logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-scroller:after {
     background: rgb(0, 0, 0);
   }
   .logos-wrapper .logos-header {
