@@ -100,6 +100,7 @@ document.body.addEventListener('mousemove', function (e) {
   // but we want it relative to our wrapper
   x -= document.querySelector('.preview-box').getBoundingClientRect().left;
   x -= document.querySelector('.mobile-preview-box').getBoundingClientRect().left;
+  console.log("moved");
   // Okay let's change our state
   scrollIt(x);
 });
@@ -121,13 +122,13 @@ function scrollIt(x) {
   let transformMobile = Math.max(0, (Math.min(x, document.querySelector('.mobile-preview-box').offsetWidth)));
   document.querySelector('.after').style.width = transform + "px";
   document.querySelector('.scroller').style.left = transform - 25 + "px";
-  document.querySelector('.m-after').style.width = transform + "px";
-  document.querySelector('.m-scroller').style.left = transform - 25 + "px";
+  document.querySelector('.m-after').style.width = transformMobile + "px";
+  document.querySelector('.m-scroller').style.left = transformMobile - 25 + "px";
 }
 
 // Let's set our opening state based off the width, 
 // we don't want to show the image on its after state to lose the surprise.
-scrollIt(0);
+scrollIt(10);
 
 // And finally let's repeat the process for touch events
 // first our middle scroller...
