@@ -2,6 +2,9 @@
 
 const gallery = document.querySelectorAll(".logo"),
   previewBox = document.querySelector(".preview-box"),
+  mPreviewBox = document.querySelector(".mobile-preview-box"),
+  mPreviewBefore = mPreviewBox.querySelector(".before img"),
+  mPreviewAfter = mPreviewBox.querySelector(".after img"),
   previewBefore = previewBox.querySelector(".before img"),
   previewAfter = previewBox.querySelector(".after img"),
   closeIcon = previewBox.querySelector(".icon");
@@ -19,14 +22,18 @@ window.onload = () => {
         let embroideryImage = gallery[newIndex].querySelector("img").getAttribute("data-embroidery");
         previewBefore.src = vectorImage;
         previewAfter.src = embroideryImage;
+        mPreviewBefore.src = vectorImage;
+        mPreviewAfter.src = embroideryImage;
 
         thisImg = previewBefore;
         getImageBrightness(previewBefore, function (thisImageID, brightness) {
           if (brightness < 128) {
             document.querySelector(".scroller").style.filter = "invert(1)";
+            closeIcon.style.filter = "invert(0)";
           }
           else {
             document.querySelector(".scroller").style.filter = "invert(0)";
+            closeIcon.style.filter = "invert(1)";
           }
         });
       }
