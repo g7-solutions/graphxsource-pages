@@ -872,7 +872,7 @@ svg #wheel {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    pointer-events: none;
+                    pointer-events:none;
                     overflow: hidden;
 
                     .m-content-image {
@@ -893,10 +893,6 @@ svg #wheel {
                     pointer-events: auto;
                     cursor: pointer;
                     filter: invert(1);
-                }
-
-                .m-scroller:hover {
-                    opacity: 1;
                 }
 
                 .m-scrolling {

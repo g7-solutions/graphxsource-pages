@@ -796,9 +796,6 @@ svg #wheel {
     cursor: pointer;
     filter: invert(1);
   }
-  .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-scroller:hover {
-    opacity: 1;
-  }
   .logos-wrapper .mobile-previewbox-wrapper .mobile-preview-box .m-scrolling {
     pointer-events: none;
     opacity: 1;

@@ -58,13 +58,11 @@ let active = false;
 // First we'll have to set up our event listeners
 // We want to watch for clicks on our scroller
 document.querySelector('.scroller').addEventListener('mousedown', function () {
-  console.log("A");
   active = true;
   // Add our scrolling class so the scroller has full opacity while active
   document.querySelector('.scroller').classList.add('scrolling');
 });
 document.querySelector('.m-scroller').addEventListener('mousedown', function () {
-  console.log("A");
   active = true;
   // Add our scrolling class so the scroller has full opacity while active
   document.querySelector('.m-scroller').classList.add('m-scrolling');
@@ -91,7 +89,6 @@ document.body.addEventListener('mouseleave', function () {
   document.querySelector('.m-scroller').classList.remove('m-scrolling');
 });
 
-
 // Let's figure out where their mouse is at
 document.body.addEventListener('mousemove', function (e) {
   if (!active) return;
@@ -99,20 +96,16 @@ document.body.addEventListener('mousemove', function (e) {
   let x = e.pageX;
   // but we want it relative to our wrapper
   x -= document.querySelector('.preview-box').getBoundingClientRect().left;
-  x -= document.querySelector('.mobile-preview-box').getBoundingClientRect().left;
-  console.log("moved");
   // Okay let's change our state
   scrollIt(x);
 });
 
-document.body.addEventListener('touchmove', function (e) {
+document.body.addEventListener('touchmove', function (e)  {
   if (!active) return;
-  // Their mouse is here...
-  let x = e.pageX;
-  // but we want it relative to our wrapper
-  x -= document.querySelector('.preview-box').getBoundingClientRect().left;
+  const touch = e.touches[0];
+  let x = touch.pageX;
   x -= document.querySelector('.mobile-preview-box').getBoundingClientRect().left;
-  // Okay let's change our state
+  console.log("Touch Move: " + x);
   scrollIt(x);
 });
 
@@ -148,14 +141,17 @@ document.body.addEventListener('touchcancel', function () {
 document.querySelector('.m-scroller').addEventListener('touchstart', function () {
   active = true;
   document.querySelector('.m-scroller').classList.add('m-scrolling');
+  console.log("Touch Started!");
 });
 document.body.addEventListener('touchend', function () {
   active = false;
   document.querySelector('.m-scroller').classList.remove('m-scrolling');
+  console.log("Touch Ended!");
 });
 document.body.addEventListener('touchcancel', function () {
   active = false;
   document.querySelector('.m-scroller').classList.remove('m-scrolling');
+  console.log("Touch Cancelled!");
 });
 
 
