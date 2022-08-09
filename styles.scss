@@ -312,6 +312,11 @@ body {
         background-size: cover;
         background-position: right;
         border-right: 2px solid var(--graytext);
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
 
         .dragon-logo {
             width: 100%;
@@ -418,6 +423,11 @@ body {
         box-sizing: border-box;
         height: 100%;
         width: 50%;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
 
         .blank-logo {
             background-color: #fff;
@@ -592,6 +602,11 @@ body {
     padding: 0;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
     overflow: hidden;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 
     .details {
         padding: 1rem;
@@ -599,6 +614,11 @@ body {
         right: 0;
         top: 0;
         z-index: 201;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
 
         .icon {
             color: #fff;
@@ -742,13 +762,17 @@ svg #wheel {
     animation: scroll ease 1.5s infinite;
 }
 
-@media screen and (max-width: 43rem) {
+@media only screen and (min-width: 320px) and (max-width: 46rem) {
     /*Mobile Devices*/
 
     body {
         flex-direction: column;
         overflow-y: scroll;
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
     }
+
     .header-col {
         height: 100vh;
         width: 100%;
@@ -790,6 +814,7 @@ svg #wheel {
             padding: 1.5rem;
             position: fixed;
             bottom: 0;
+            left: 0;
 
             p {
                 display: none;
@@ -806,7 +831,7 @@ svg #wheel {
 
     .sticky {
         position: fixed;
-        top: 0;
+        bottom: 0;
         height: 5rem;
     }
 
@@ -825,6 +850,7 @@ svg #wheel {
 
     .logos-wrapper {
         width: 100%;
+        height: 100%;
         flex-direction: column;
         padding: 0;
 
@@ -850,10 +876,11 @@ svg #wheel {
             display: flex;
             justify-content: center;
             align-items: center;
+            padding: 1rem;
 
             .mobile-preview-box {
                 aspect-ratio: 1 / 1;
-                width: 90%;
+                width: 100%;
                 position: relative;
                 opacity: 1;
                 pointer-events: none;
@@ -872,7 +899,7 @@ svg #wheel {
                     position: absolute;
                     top: 0;
                     left: 0;
-                    pointer-events:none;
+                    pointer-events: none;
                     overflow: hidden;
 
                     .m-content-image {
@@ -943,15 +970,23 @@ svg #wheel {
             width: 100%;
             flex-direction: row;
             align-items: center;
-            padding: 0.8rem;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            height: 10%;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
 
             .dragon-logo {
                 width: fit-content;
-                padding: 40px 0px 40px 40px;
-                margin-right: -30px;
-
+                padding: 0;
+                margin: 0;
                 img {
-                    max-height: 35px;
+                    padding: 0;
+                    height: 2rem;
                 }
             }
 
@@ -965,8 +1000,8 @@ svg #wheel {
                         display: none;
                     }
                     p {
-                        max-width: 70%;
-                        font-size: 0.8rem;
+                        max-width: 100%;
+                        font-size: 0.7rem;
                     }
                 }
             }
@@ -981,7 +1016,10 @@ svg #wheel {
             display: flex;
             align-items: flex-end;
             overflow-x: scroll;
-            height: fit-content;
+            height: 25%;
+            img {
+                max-width: 100%;
+            }
 
             .blank-logo {
                 display: none;
@@ -1023,10 +1061,367 @@ svg #wheel {
     }
 }
 
-@media screen and (max-width: 62rem) {
+@media only screen and (max-width: 62rem) and (min-width: 44rem) {
     /*Tablets*/
+    body {
+        flex-direction: column;
+        overflow-y: scroll;
+        overflow-x: hidden;
+        width: 100%;
+        margin: 0;
+    }
+
+    .header-col {
+        height: 100vh;
+        width: 100%;
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/dragon-mockup.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        .gxs {
+            padding: 2rem 0;
+            .gxs-logo {
+                width: 100%;
+                max-width: 360px;
+            }
+        }
+
+        .team-name {
+            .overlaps {
+                transform: rotate(0);
+
+                p {
+                    &:nth-child(1) {
+                        font-size: 14rem;
+                    }
+                    &:nth-child(2) {
+                        font-size: 4rem;
+                        line-height: 4rem;
+                        margin-top: 4rem;
+                        text-shadow: 0px -0.5rem 4rem #000;
+                    }
+                }
+            }
+        }
+
+        .extra {
+            background: var(--gradientA);
+            background: linear-gradient(to right, var(--gradientA), var(--gradientB));
+            height: 10rem;
+            padding: 2rem;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+
+            p {
+                display: none;
+            }
+
+            .cta-mobile {
+                display: initial;
+                font-size: 1.5rem;
+                padding: 2.5rem;
+            }
+        }
+    }
+    .image-col {
+        display: none;
+    }
+
+    .sticky {
+        position: fixed;
+        bottom: 0;
+        height: 5rem;
+    }
+
+    .text-col {
+        width: 100%;
+        padding: 2rem;
+
+        .menu {
+            display: none;
+        }
+
+        .cta-main {
+            display: none;
+        }
+
+        .description {
+            h2 {
+                font-size: 3.5rem;
+            }
+            p {
+                font-size: 1.3rem;
+                line-height: 1.8rem;
+
+                &:first-child {
+                    font-size: 3rem;
+                }
+            }
+        }
+    }
+
+    .logos-wrapper {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        padding: 0;
+
+        .mobile-footer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 10%;
+            background-color: var(--gradientB);
+
+            p {
+                font-family: A-Light;
+                font-weight: 600;
+                text-transform: uppercase;
+                color: var(--graytext);
+                text-align: center;
+                font-size: 1.5rem;
+            }
+        }
+
+        .mobile-previewbox-wrapper {
+            width: 100%;
+            height: 55%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+
+            .mobile-preview-box {
+                aspect-ratio: 1 / 1;
+                height: 95%;
+                position: relative;
+                opacity: 1;
+                pointer-events: none;
+                border-radius: 0;
+                padding: 0;
+                box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+                overflow: hidden;
+
+                .m-before,
+                .m-after {
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center;
+                    width: 100%;
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    pointer-events: none;
+                    overflow: hidden;
+
+                    .m-content-image {
+                        height: 100%;
+                    }
+                }
+
+                .m-scroller {
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    left: 100px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    border-radius: 50%;
+                    background-color: transparent;
+                    opacity: 0.9;
+                    pointer-events: auto;
+                    cursor: pointer;
+                    filter: invert(1);
+                }
+
+                .m-scrolling {
+                    pointer-events: none;
+                    opacity: 1;
+                    z-index: 1;
+                }
+
+                .m-scroller__thumb {
+                    width: 100%;
+                    height: 100%;
+                    padding: 5px;
+                }
+
+                .m-scroller:before,
+                .m-scroller:after {
+                    content: " ";
+                    display: block;
+                    width: 7px;
+                    height: 9999px;
+                    position: absolute;
+                    left: 50%;
+                    margin-left: -3.5px;
+                    z-index: 30;
+                    transition: 0.1s;
+                }
+
+                .m-scroller:before {
+                    top: 100%;
+                }
+
+                .m-scroller:after {
+                    bottom: 100%;
+                }
+
+                .m-scroller {
+                    border: 5px solid rgb(0, 0, 0);
+                }
+
+                .m-scroller:before,
+                .m-scroller:after {
+                    background: rgb(0, 0, 0);
+                }
+            }
+        }
+
+        .logos-header {
+            width: 100%;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1.5rem;
+            height: 10%;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+
+            .dragon-logo {
+                width: fit-content;
+                padding: 0;
+                margin: 0;
+                img {
+                    padding: 0;
+                    height: 3rem;
+                }
+            }
+
+            .logos-header-content {
+                flex-direction: row;
+                .header-info {
+                    display: none;
+                }
+                .instructions {
+                    img {
+                        display: none;
+                    }
+                    p {
+                        max-width: 100%;
+                        font-size: 1rem;
+                    }
+                }
+            }
+
+            .logos-footer {
+                display: none;
+            }
+        }
+
+        .logos-container {
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            overflow-x: scroll;
+            height: 25%;
+            img {
+                max-width: 100%;
+            }
+
+            .blank-logo {
+                display: none;
+            }
+
+            .logo {
+                height: 20vh;
+                width: 20vh;
+                aspect-ratio: 1 / 1;
+                filter: none;
+            }
+
+            .col-1 {
+                display: flex;
+                flex-direction: row;
+                width: fit-content;
+            }
+            .col-2 {
+                display: flex;
+                flex-direction: row;
+                width: fit-content;
+
+                .blank-logo:nth-child(1) {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .preview-box {
+        display: none;
+    }
 }
 
-@media screen and (max-width: 82rem) {
+@media only screen and (max-width: 82rem) and (min-width: 62.1rem) {
     /*Small Desktops*/
+    body {
+        width: 100%;
+    }
+
+    .image-zoom {
+        display: none;
+    }
+
+    .text-col {
+        .menu {
+            display: none;
+        }
+        .description {
+            height: 100%;
+            h2 {
+                font-size: 2rem;
+            }
+            div {
+                height: 90%;
+            }
+            .cta-main {
+                height: 10%;
+                padding: 1.5rem 1rem;
+            }
+        }
+    }
+
+    .logos-wrapper {
+        .logos-container{
+            .blank-logo {
+                height: 200px;
+                p{
+                    &:nth-child(2){
+                        font-size: 4rem;
+                        line-height: 4rem;
+                    }
+                }
+            }
+            .logo{
+                height: 200px;
+                filter: none;
+            }
+        }
+    }
+
+    .preview-box{
+        max-width: 40vw;
+        max-height: 40vw;
+    }
+
+    .mobile-previewbox-wrapper{
+        display: none;
+    }
 }

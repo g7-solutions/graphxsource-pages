@@ -16,7 +16,13 @@ window.onload = () => {
 
     gallery[i].onclick = () => {
       clickedImgIndex = i;
-      scrollIt(0);
+      if(window.innerWidth <= 688){
+        scrollIt(150);
+      }else if (window.innerWidth <= 1280) {
+        scrollIt(235);
+      }else{
+        scrollIt(350);
+      }
       function preview() {
         let vectorImage = gallery[newIndex].querySelector("img").getAttribute("data-vector");
         let embroideryImage = gallery[newIndex].querySelector("img").getAttribute("data-embroidery");
@@ -105,7 +111,6 @@ document.body.addEventListener('touchmove', function (e)  {
   const touch = e.touches[0];
   let x = touch.pageX;
   x -= document.querySelector('.mobile-preview-box').getBoundingClientRect().left;
-  console.log("Touch Move: " + x);
   scrollIt(x);
 });
 
@@ -121,7 +126,7 @@ function scrollIt(x) {
 
 // Let's set our opening state based off the width, 
 // we don't want to show the image on its after state to lose the surprise.
-scrollIt(10);
+scrollIt(200);
 
 // And finally let's repeat the process for touch events
 // first our middle scroller...
@@ -141,17 +146,14 @@ document.body.addEventListener('touchcancel', function () {
 document.querySelector('.m-scroller').addEventListener('touchstart', function () {
   active = true;
   document.querySelector('.m-scroller').classList.add('m-scrolling');
-  console.log("Touch Started!");
 });
 document.body.addEventListener('touchend', function () {
   active = false;
   document.querySelector('.m-scroller').classList.remove('m-scrolling');
-  console.log("Touch Ended!");
 });
 document.body.addEventListener('touchcancel', function () {
   active = false;
   document.querySelector('.m-scroller').classList.remove('m-scrolling');
-  console.log("Touch Cancelled!");
 });
 
 
