@@ -9,6 +9,18 @@ const gallery = document.querySelectorAll(".logo"),
   previewAfter = previewBox.querySelector(".after img"),
   closeIcon = previewBox.querySelector(".icon");
 
+var mobileQuery = window.matchMedia('screen and (min-width: 320px) and (max-width: 46rem)');
+var tabletQuery = window.matchMedia('screen and (max-width: 62rem) and (min-width: 46.1rem)');
+var desktopQuery = window.matchMedia('screen and (max-width: 82rem) and (min-width: 62.1rem)');
+var fullQuery = window.matchMedia('screen and (min-width: 82.1rem)');
+
+function centerScroller() {
+  let x = previewBox.offsetWidth / 2;
+  let xM = mPreviewBox.offsetWidth / 2;
+  scrollIt(x);
+  scrollMobile(xM);
+}
+
 window.onload = () => {
   for (let i = 0; i < gallery.length; i++) {
     let newIndex = i;
@@ -16,13 +28,9 @@ window.onload = () => {
 
     gallery[i].onclick = () => {
       clickedImgIndex = i;
-      if(window.innerWidth <= 688){
-        scrollIt(150);
-      }else if (window.innerWidth <= 1280) {
-        scrollIt(235);
-      }else{
-        scrollIt(350);
-      }
+
+      centerScroller();
+
       function preview() {
         let vectorImage = gallery[newIndex].querySelector("img").getAttribute("data-vector");
         let embroideryImage = gallery[newIndex].querySelector("img").getAttribute("data-embroidery");
@@ -48,35 +56,32 @@ window.onload = () => {
       preview();
 
       previewBox.classList.add("show");
+      previewBox.style.opacity = 1;
       closeIcon.onclick = () => {
         newIndex = clickedImgIndex;
         previewBox.classList.remove("show");
+        previewBox.style.opacity = 0;
       }
     }
   }
+
+  if(mobileQuery.matches || tabletQuery.matches ){
+    gallery[0].click();
+  } else return;
 }
 
 // SCROLLING FUNCTIONS FOR BEFORE & AFTER GALLERY
-
-// Let's use the 'active' variable to let us know when we're using it
 let active = false;
 
-// First we'll have to set up our event listeners
-// We want to watch for clicks on our scroller
 document.querySelector('.scroller').addEventListener('mousedown', function () {
   active = true;
-  // Add our scrolling class so the scroller has full opacity while active
   document.querySelector('.scroller').classList.add('scrolling');
 });
 document.querySelector('.m-scroller').addEventListener('mousedown', function () {
   active = true;
-  // Add our scrolling class so the scroller has full opacity while active
   document.querySelector('.m-scroller').classList.add('m-scrolling');
 });
 
-// We also want to watch the body for changes to the state,
-// like moving around and releasing the click
-// so let's set up our event listeners
 document.body.addEventListener('mouseup', function () {
   active = false;
   document.querySelector('.scroller').classList.remove('scrolling');
@@ -95,41 +100,37 @@ document.body.addEventListener('mouseleave', function () {
   document.querySelector('.m-scroller').classList.remove('m-scrolling');
 });
 
-// Let's figure out where their mouse is at
 document.body.addEventListener('mousemove', function (e) {
   if (!active) return;
-  // Their mouse is here...
   let x = e.pageX;
-  // but we want it relative to our wrapper
   x -= document.querySelector('.preview-box').getBoundingClientRect().left;
-  // Okay let's change our state
   scrollIt(x);
+  scrollMobile(x);
 });
 
-document.body.addEventListener('touchmove', function (e)  {
+document.body.addEventListener('touchmove', function (e) {
   if (!active) return;
   const touch = e.touches[0];
   let x = touch.pageX;
   x -= document.querySelector('.mobile-preview-box').getBoundingClientRect().left;
-  scrollIt(x);
+  scrollMobile(x);
 });
 
-// Let's use this function
 function scrollIt(x) {
   let transform = Math.max(0, (Math.min(x, document.querySelector('.preview-box').offsetWidth)));
-  let transformMobile = Math.max(0, (Math.min(x, document.querySelector('.mobile-preview-box').offsetWidth)));
   document.querySelector('.after').style.width = transform + "px";
   document.querySelector('.scroller').style.left = transform - 25 + "px";
-  document.querySelector('.m-after').style.width = transformMobile + "px";
-  document.querySelector('.m-scroller').style.left = transformMobile - 25 + "px";
 }
 
-// Let's set our opening state based off the width, 
-// we don't want to show the image on its after state to lose the surprise.
-scrollIt(200);
+function scrollMobile(x) {
+  let transform = Math.max(0, (Math.min(x, document.querySelector('.mobile-preview-box').offsetWidth)));
+  document.querySelector('.m-after').style.width = transform + "px";
+  document.querySelector('.m-scroller').style.left = transform - 25 + "px";
+}
 
-// And finally let's repeat the process for touch events
-// first our middle scroller...
+scrollIt(0);
+scrollMobile(0);
+
 document.querySelector('.scroller').addEventListener('touchstart', function () {
   active = true;
   document.querySelector('.scroller').classList.add('scrolling');
@@ -212,4 +213,38 @@ window.onscroll = function () {
   } else {
     buttonDiv.classList.remove("sticky");
   }
+}
+
+window.onresize = function () {
+  centerScroller();
+  mobileQuery.addEventListener('change', function (mq) {
+    if (mq.matches) {
+      if (previewBox.classList.contains("show")) {
+        previewBox.classList.remove("show");
+        previewBox.style.opacity = 0;
+      }
+    }
+  });
+  tabletQuery.addEventListener('change', function (mq) {
+    if (mq.matches) {
+      if (previewBox.classList.contains("show")) {
+        previewBox.classList.remove("show");
+        previewBox.style.opacity = 0;
+      }
+    }
+  });
+  desktopQuery.addEventListener('change', function (mq) {
+    if (mq.matches) {
+      if (mPreviewBox.display === "none") {
+        mPreviewBox.display = "none";
+      }
+    }
+  });
+  fullQuery.addEventListener('change', function (mq) {
+    if (mq.matches) {
+      if (mPreviewBox.display === "none") {
+        mPreviewBox.display = "none";
+      }
+    }
+  });
 }
