@@ -20,14 +20,14 @@ body {
     --paragraph-size: 1.2rem;
     --button-text-size: 1rem;
 
-    --dynamicImage: url("/img/sampleA.jpg");
+    --dynamicImage: url("img/sampleA.jpg");
 }
 
 main {
     width: 100%;
     height: 100vh;
     position: relative;
-    background-image: url("/img/astronaut-artwork.svg");
+    background-image: url("img/astronaut-artwork.svg");
     background-size: contain;
     background-position: right;
     background-repeat: no-repeat;
@@ -40,7 +40,7 @@ main {
         width: 100%;
         height: 100%;
         z-index: 1;
-        background-image: url("/img/astronaut-artwork.svg");
+        background-image: url("img/astronaut-artwork.svg");
         background-size: contain;
         background-position: right;
         background-repeat: no-repeat;
@@ -280,7 +280,7 @@ main {
     border: none;
     outline: none;
     background-color: #f4f4f4;
-    background-image: url("/img/vector-pen.svg");
+    background-image: url("img/vector-pen.svg");
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center;
@@ -306,7 +306,7 @@ main {
 
     main {
         .fog-bg {
-            background-image: url("/img/mobile-background.svg");
+            background-image: url("img/mobile-background.svg");
             background-blend-mode: overlay;
             background-color: hsla(0, 0%, 0%, 0.719);
             background-size: cover;
