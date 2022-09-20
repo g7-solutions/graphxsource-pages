@@ -4,16 +4,16 @@ let oldValue = 1;
 $("#process-selector").on('input', function () {
     var imgArray = [{
         Val: 1,
-        Url: 'redraw/img/original-arts/original(' + $("#artwork").data('number') + ').jpg'
+        Url: 'img/original-arts/original(' + $("#artwork").data('number') + ').jpg'
     }, {
         Val: 2,
-        Url: 'redraw/img/step-one/step-one(' + $("#artwork").data('number') + ').jpg'
+        Url: 'img/step-one/step-one(' + $("#artwork").data('number') + ').jpg'
     }, {
         Val: 3,
-        Url: 'redraw/img/step-two/step-two(' + $("#artwork").data('number') + ').jpg'
+        Url: 'img/step-two/step-two(' + $("#artwork").data('number') + ').jpg'
     }, {
         Val: 4,
-        Url: 'redraw/img/final-product/final-product(' + $("#artwork").data('number') + ').jpg'
+        Url: 'img/final-product/final-product(' + $("#artwork").data('number') + ').jpg'
     }];
 
     //Calcute range value reducing to one-digit number to ease dymamic image selection
@@ -71,16 +71,16 @@ $(".steps p").click(function (event) {
 
     var imgArray = [{
         Val: 1,
-        Url: 'redraw/img/original-arts/original(' + $("#artwork").data('number') + ').jpg'
+        Url: 'img/original-arts/original(' + $("#artwork").data('number') + ').jpg'
     }, {
         Val: 2,
-        Url: 'redraw/img/step-one/step-one(' + $("#artwork").data('number') + ').jpg'
+        Url: 'img/step-one/step-one(' + $("#artwork").data('number') + ').jpg'
     }, {
         Val: 3,
-        Url: 'redraw/img/step-two/step-two(' + $("#artwork").data('number') + ').jpg'
+        Url: 'img/step-two/step-two(' + $("#artwork").data('number') + ').jpg'
     }, {
         Val: 4,
-        Url: 'redraw/img/final-product/final-product(' + $("#artwork").data('number') + ').jpg'
+        Url: 'img/final-product/final-product(' + $("#artwork").data('number') + ').jpg'
     }];
 
     //Calcute range value reducing to one-digit number to ease dymamic image selection
