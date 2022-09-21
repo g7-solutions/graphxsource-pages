@@ -3,6 +3,7 @@ let next = $(".next-btn");
 let machine = $(".machine");
 let oldValue = 0;
 let newValue;
+let imgArray = ['A', 'B', 'C', 'D', 'E', 'F', 'G'];
 
 $.fn.rotationInfo = function() {
     var el = $(this),
@@ -22,12 +23,34 @@ next.click(function(){
     oldValue = machine.rotationInfo().deg;
     newValue = oldValue + 60;
     machine.css({ 'transform': 'rotate('+ newValue +'deg)'}, 1000);
-    console.log("rotated: " + newValue);
+    arrayRotate(imgArray);
+    $("#debug-left").text(imgArray[0]);
+    $("#debug-center").text(imgArray[1]);
+    $("#debug-right").text(imgArray[2]);
 });
 
 prev.click(function(){
     oldValue = machine.rotationInfo().deg;
     newValue = oldValue - 60;
     machine.css({ 'transform': 'rotate('+ newValue +'deg)'}, 1000);
-    console.log("rotated: " + newValue);
+    arrayRotate(imgArray, true);
+    $("#debug-left").text(imgArray[0]);
+    $("#debug-center").text(imgArray[1]);
+    $("#debug-right").text(imgArray[2]);
 });
+
+$(".holder-right").click(function(){
+    oldValue = machine.rotationInfo().deg;
+    newValue = oldValue + 60;
+    machine.css({ 'transform': 'rotate('+ newValue +'deg)'}, 1000);
+    arrayRotate(imgArray);
+    $("#debug-left").text(imgArray[0]);
+    $("#debug-center").text(imgArray[1]);
+    $("#debug-right").text(imgArray[2]);
+});
+
+function arrayRotate(arr, reverse){
+    if(reverse) arr.unshift(arr.pop());
+    else arr.push(arr.shift());
+    return arr;
+}
