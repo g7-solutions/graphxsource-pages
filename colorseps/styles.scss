@@ -38,40 +38,52 @@ body {
         height: 700px;
         transform-origin: 50% 50%;
         transition: all 0.3s ease;
-
         
         div{
             position: relative;
             width: 100%;
             height: 100%;
 
-            .holder{
+            a{
                 position: absolute;
-                width: 95px;
-                height: 116px;
-                background-color: greenyellow;
+                width: 100px;
+                height: 120px;
                 transform-origin: 50% 50%;
+            }
+
+            .holder-1{
+                background-color: greenyellow;
                 bottom: 40px; left: 43%;
             }
         
-            .holder-right{
-                position: absolute;
-                width: 95px;
-                height: 120px;
+            .holder-2{
                 background-color: red;
-                transform-origin: 50% 50%;
                 right: 85px; bottom: 24%;
-                transform: rotate(-60deg);
+                rotate: -60deg;
             }
 
-            .holder-left{
-                position: absolute;
-                width: 95px;
-                height: 120px;
+            .holder-3{
+                background-color: turquoise;
+                right: 82px; top: 23%;
+                rotate: -120deg;
+            }
+
+            .holder-4{
+                background-color: yellow;
+                top: 40px; left: 43%;
+                rotate: 180deg;
+            }
+
+            .holder-5{
+                background-color: magenta;
+                left: 82px; top: 23%;
+                rotate: 120deg;
+            }
+
+            .holder-6{
                 background-color: orange;
-                transform-origin: 50% 50%;
                 left: 85px; bottom: 24%;
-                transform: rotate(60deg);
+                rotate: 60deg;
             }
         }
     }

@@ -43,34 +43,46 @@ body {
   width: 100%;
   height: 100%;
 }
-#wrapper .machine div .holder {
+#wrapper .machine div a {
   position: absolute;
-  width: 95px;
-  height: 116px;
-  background-color: greenyellow;
+  width: 100px;
+  height: 120px;
   transform-origin: 50% 50%;
+}
+#wrapper .machine div .holder-1 {
+  background-color: greenyellow;
   bottom: 40px;
   left: 43%;
 }
-#wrapper .machine div .holder-right {
-  position: absolute;
-  width: 95px;
-  height: 120px;
+#wrapper .machine div .holder-2 {
   background-color: red;
-  transform-origin: 50% 50%;
   right: 85px;
   bottom: 24%;
-  transform: rotate(-60deg);
+  rotate: -60deg;
 }
-#wrapper .machine div .holder-left {
-  position: absolute;
-  width: 95px;
-  height: 120px;
+#wrapper .machine div .holder-3 {
+  background-color: turquoise;
+  right: 82px;
+  top: 23%;
+  rotate: -120deg;
+}
+#wrapper .machine div .holder-4 {
+  background-color: yellow;
+  top: 40px;
+  left: 43%;
+  rotate: 180deg;
+}
+#wrapper .machine div .holder-5 {
+  background-color: magenta;
+  left: 82px;
+  top: 23%;
+  rotate: 120deg;
+}
+#wrapper .machine div .holder-6 {
   background-color: orange;
-  transform-origin: 50% 50%;
   left: 85px;
   bottom: 24%;
-  transform: rotate(60deg);
+  rotate: 60deg;
 }
 #wrapper #debug {
   display: flex;
