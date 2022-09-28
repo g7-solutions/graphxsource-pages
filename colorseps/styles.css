@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +8,133 @@
 body {
   margin: 0;
   padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --light: #fafafa;
+  --dark: #252122;
+  --gxs-orange: #ff6c0e;
+  --gxs-blue: #1ecad3;
+  --gray: #919191;
+}
+
+h1 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 5rem;
+}
+
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+}
+
+a, button {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none !important;
+}
+
+.cta {
+  background-color: var(--gxs-orange);
+  padding: 1rem 1.5rem;
+  outline: none;
+  border-style: none;
+  border-radius: 2rem;
+  transition: background-color 0.2s ease-in-out;
+}
+.cta a {
+  color: var(--light);
+  text-transform: uppercase;
+}
+.cta:hover {
+  background-color: #fb863c;
+}
+.cta:active {
+  background-color: #b74f0d;
+}
+
+#hero {
+  height: 100vh;
+  display: grid;
+  padding: 6rem 12rem;
+  gap: 1rem;
+  align-items: center;
+  grid-template-areas: "content image" "footer footer";
+}
+#hero .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+  grid-area: content;
+  grid-auto-columns: 1fr;
+}
+#hero .content h1 {
+  color: var(--dark);
+}
+#hero .content h1 span {
+  color: var(--gxs-orange);
+}
+#hero .content p {
+  color: var(--gray);
+}
+#hero .image {
+  grid-area: image;
+}
+#hero .image img {
+  max-width: 50vw;
+}
+#hero .footer {
+  grid-area: footer;
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+#hero .footer h2 {
+  padding-right: 3rem;
+  border-right: solid 1px var(--gray);
+}
+#hero .footer p {
+  color: var(--gray);
+  max-width: 40%;
+}
+
+#middle {
+  background-color: var(--dark);
+  color: var(--light);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 12rem;
+}
+#middle h2 {
+  max-width: 40%;
+  text-align: left;
+}
+#middle i {
+  color: var(--gxs-orange);
+  font-size: 4rem;
+}
+#middle p span {
+  padding: 1rem;
+  margin-left: 0.5rem;
+  border: solid 1px var(--gxs-orange);
 }
 
 #wrapper {
@@ -18,6 +146,7 @@ body {
   align-items: center;
   gap: 2rem;
   position: relative;
+  overflow: hidden;
 }
 #wrapper .next-btn, #wrapper .prev-btn {
   background-color: #e4e4e4;
@@ -28,13 +157,14 @@ body {
 }
 #wrapper .machine {
   position: absolute;
-  background-image: url("/colorseps/img/machine.svg");
+  background-image: url("/colorseps/img/sp-machine.svg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  top: -350px;
-  width: 700px;
-  height: 700px;
+  top: -1700px;
+  left: 1250;
+  width: 2500px;
+  aspect-ratio: 1/1;
   transform-origin: 50% 50%;
   transition: all 0.3s ease;
 }
@@ -45,14 +175,14 @@ body {
 }
 #wrapper .machine div a {
   position: absolute;
-  width: 100px;
-  height: 120px;
+  width: 530px;
+  height: 645px;
   transform-origin: 50% 50%;
 }
 #wrapper .machine div .holder-1 {
   background-color: greenyellow;
-  bottom: 40px;
-  left: 43%;
+  bottom: 46px;
+  left: 39.5%;
 }
 #wrapper .machine div .holder-2 {
   background-color: red;
@@ -71,18 +201,6 @@ body {
   top: 40px;
   left: 43%;
   rotate: 180deg;
-}
-#wrapper .machine div .holder-5 {
-  background-color: magenta;
-  left: 82px;
-  top: 23%;
-  rotate: 120deg;
-}
-#wrapper .machine div .holder-6 {
-  background-color: orange;
-  left: 85px;
-  bottom: 24%;
-  rotate: 60deg;
 }
 #wrapper #debug {
   display: flex;
