@@ -19,11 +19,8 @@ $("#process-selector").on('input', function () {
     //Calcute range value reducing to one-digit number to ease dymamic image selection
     final = Math.round((((this.value - 1) * (4 - 1)) / (100 - 1)) + 1);
     if (oldValue != final) {
-        $("#artwork").fadeTo(300, 0, function () {
-            $("#artwork").attr("src", imgArray.filter(a => a.Val == final)[0].Url);
-        }).fadeTo(300, 1);
+        $("#artwork").attr("src", imgArray.filter(a => a.Val == final)[0].Url);
         oldValue = final;
-
         let steps = $(".steps p");
         for (i = 0; i < steps.length; i++) {
             if ((final - 1) == i) {
@@ -86,9 +83,7 @@ $(".steps p").click(function (event) {
     //Calcute range value reducing to one-digit number to ease dymamic image selection
     final = Math.round((((selector.value - 1) * (4 - 1)) / (100 - 1)) + 1);
     if (oldValue != final) {
-        $("#artwork").fadeTo(300, 0, function () {
-            $("#artwork").attr("src", imgArray.filter(a => a.Val == final)[0].Url);
-        }).fadeTo(300, 1);
+        $("#artwork").attr("src", imgArray.filter(a => a.Val == final)[0].Url);
         oldValue = final;
     }
 
@@ -98,11 +93,8 @@ $(".gallery .gallery-img").click(function (event) {
     let source = $(this).attr('src');
     let number = $(this).data('number');
     let showcase = $("#artwork");
-
-    showcase.fadeTo(300, 0, function () {
-        showcase.attr({ src: source, });
-        showcase.data('number', number);
-    }).fadeTo(300, 1);
+    showcase.attr({ src: source, });
+    showcase.data('number', number);
     selector.value = 1;
     oldValue = 1; final = 1;
     $(".steps p").removeClass('clicked');
