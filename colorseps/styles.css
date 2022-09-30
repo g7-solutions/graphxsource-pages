@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -8,7 +10,25 @@
 body {
   margin: 0;
   padding: 0;
+  -webkit-font-smoothing: antialiased;
   font-family: "Montserrat", sans-serif;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
 }
 
 :root {
@@ -41,7 +61,8 @@ p {
   line-height: 1.8rem;
 }
 
-a, button {
+a,
+button {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -56,6 +77,10 @@ a, button {
   border-style: none;
   border-radius: 2rem;
   transition: background-color 0.2s ease-in-out;
+  -webkit-animation: backwards fadeIn 0.6s ease;
+          animation: backwards fadeIn 0.6s ease;
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
 }
 .cta a {
   color: var(--light);
@@ -86,17 +111,27 @@ a, button {
 }
 #hero .content h1 {
   color: var(--dark);
+  -webkit-animation: backwards fadeIn 0.6s ease;
+          animation: backwards fadeIn 0.6s ease;
 }
 #hero .content h1 span {
   color: var(--gxs-orange);
 }
 #hero .content p {
   color: var(--gray);
+  -webkit-animation: backwards fadeIn 0.6s ease;
+          animation: backwards fadeIn 0.6s ease;
+  -webkit-animation-delay: 0.4s;
+          animation-delay: 0.4s;
 }
 #hero .image {
   grid-area: image;
 }
 #hero .image img {
+  -webkit-animation: backwards fadeIn 0.6s ease;
+          animation: backwards fadeIn 0.6s ease;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
   max-width: 50vw;
 }
 #hero .footer {
@@ -108,10 +143,18 @@ a, button {
 #hero .footer h2 {
   padding-right: 3rem;
   border-right: solid 1px var(--gray);
+  -webkit-animation: backwards fadeIn 0.6s ease;
+          animation: backwards fadeIn 0.6s ease;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 #hero .footer p {
   color: var(--gray);
   max-width: 40%;
+  -webkit-animation: backwards fadeIn 0.6s ease;
+          animation: backwards fadeIn 0.6s ease;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 #middle {
@@ -141,69 +184,211 @@ a, button {
   width: 100%;
   height: 100vh;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  gap: 2rem;
+  background-image: url("./img/white-texture.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#wrapper .machine-wrapper {
+  width: 100%;
+  height: 100%;
   position: relative;
   overflow: hidden;
 }
-#wrapper .next-btn, #wrapper .prev-btn {
-  background-color: #e4e4e4;
-  color: #000;
-  padding: 1rem 2rem;
-  border: 1px solid #000;
-  cursor: pointer;
-}
-#wrapper .machine {
+#wrapper .machine-wrapper .machine {
   position: absolute;
-  background-image: url("/colorseps/img/sp-machine.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  top: -1700px;
-  left: 1250;
-  width: 2500px;
-  aspect-ratio: 1/1;
-  transform-origin: 50% 50%;
+  z-index: 3;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  transform-origin: 50% 42.24%;
   transition: all 0.3s ease;
 }
-#wrapper .machine div {
-  position: relative;
+#wrapper .machine-wrapper .reveal-wrapper {
+  position: absolute;
+  display: block;
+  z-index: 4;
+  transform-origin: 50% 50%;
+  top: 28%;
+  left: 38.5%;
+  width: 23%;
+  height: 68%;
+}
+#wrapper .machine-wrapper .reveal-wrapper .reveal-box {
   width: 100%;
   height: 100%;
+  position: relative;
 }
-#wrapper .machine div a {
+#wrapper .machine-wrapper .reveal-wrapper .reveal-box img {
   position: absolute;
-  width: 530px;
-  height: 645px;
-  transform-origin: 50% 50%;
+  width: inherit;
+  height: inherit;
+  transition: -webkit-clip-path 0.5s ease;
+  transition: clip-path 0.5s ease;
+  transition: clip-path 0.5s ease, -webkit-clip-path 0.5s ease;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 }
-#wrapper .machine div .holder-1 {
-  background-color: greenyellow;
-  bottom: 46px;
-  left: 39.5%;
-}
-#wrapper .machine div .holder-2 {
-  background-color: red;
-  right: 85px;
-  bottom: 24%;
-  rotate: -60deg;
-}
-#wrapper .machine div .holder-3 {
-  background-color: turquoise;
-  right: 82px;
-  top: 23%;
-  rotate: -120deg;
-}
-#wrapper .machine div .holder-4 {
-  background-color: yellow;
-  top: 40px;
-  left: 43%;
-  rotate: 180deg;
-}
-#wrapper #debug {
+#wrapper #controls {
+  width: 100%;
+  bottom: 1rem;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
   gap: 1rem;
+}
+#wrapper #controls .next-btn,
+#wrapper #controls .prev-btn {
+  border-style: none;
+  background: none;
+  color: var(--dark);
+  font-size: 4rem;
+  cursor: pointer;
+}
+#wrapper #controls .slider {
+  width: 33%;
+  height: 0.6rem;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  border-radius: 10px;
+  background-color: var(--dark);
+}
+#wrapper #controls .slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+          appearance: none;
+  background-color: var(--gxs-orange);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+}
+#wrapper #controls .slider::-moz-range-thumb {
+  -moz-appearance: none;
+       appearance: none;
+  background-color: var(--gxs-orange);
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 100%;
+}
+
+@media screen and (max-width: 100rem) {
+  #hero {
+    padding: 6rem;
+  }
+  #middle {
+    padding: 4rem;
+  }
+  #wrapper .machine-wrapper .machine {
+    width: 130%;
+    left: -15%;
+  }
+}
+@media screen and (max-width: 80rem) {
+  #hero {
+    position: relative;
+    grid-template-areas: "content content" "image image" "footer footer";
+    padding: 4rem;
+    text-align: center;
+  }
+  #hero .content {
+    align-items: center;
+    z-index: 2;
+  }
+  #hero .image {
+    position: absolute;
+    opacity: 0.2;
+    z-index: 1;
+  }
+  #hero .image img {
+    max-width: 100%;
+  }
+  #hero .footer {
+    flex-direction: column;
+    gap: 1rem;
+    z-index: 2;
+  }
+  #hero .footer h2 {
+    padding-right: 0;
+    border-right: none;
+  }
+  #hero .footer p {
+    max-width: 100%;
+  }
+  #middle {
+    text-align: center;
+    flex-direction: column;
+    padding: 4rem;
+  }
+  #middle h2 {
+    max-width: 100%;
+    text-align: center;
+  }
+  #middle p span {
+    border: none;
+    margin-left: 0;
+    padding: 0;
+  }
+  #wrapper .machine-wrapper .machine {
+    width: 160%;
+    left: -30%;
+  }
+  #wrapper #controls .slider {
+    width: 50%;
+  }
+}
+@media screen and (max-width: 65rem) {
+  #wrapper .machine-wrapper .machine {
+    width: 200%;
+    left: -50%;
+  }
+}
+@media screen and (max-width: 50rem) {
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+  #hero .image {
+    display: none;
+  }
+  #wrapper .machine-wrapper .machine {
+    width: 250%;
+    left: -75%;
+  }
+}
+@media screen and (max-width: 40rem) {
+  #wrapper .machine-wrapper .machine {
+    width: 350%;
+    left: -125%;
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+    translate: 0 -1.5rem;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    translate: 0 -1.5rem;
+  }
+  100% {
+    opacity: 1;
+    translate: 0 0;
+  }
 }/*# sourceMappingURL=styles.css.map */

@@ -25,15 +25,15 @@ body {
 
 @font-face {
   font-family: A-ExtraBold;
-  src: url("/fonts/ArgentumSans-ExtraBold.ttf");
+  src: url("./fonts/ArgentumSans-ExtraBold.ttf");
 }
 @font-face {
   font-family: A-Light;
-  src: url("/fonts/ArgentumSans-Light.ttf");
+  src: url("./fonts/ArgentumSans-Light.ttf");
 }
 @font-face {
   font-family: Zapfino;
-  src: url("/fonts/ZapfinoExtraLTPro.otf");
+  src: url("./fonts/ZapfinoExtraLTPro.otf");
 }
 .page-transition .curtain {
   position: absolute;
@@ -160,7 +160,7 @@ body {
 }
 
 .image-col {
-  background-image: url("/img/dragon-mockup.png");
+  background-image: url("./img/dragon-mockup.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -170,7 +170,7 @@ body {
 .image-col .image-zoom {
   background-repeat: no-repeat;
   background-size: 300%;
-  background-image: url("/img/dragon-vector.jpg");
+  background-image: url("./img/dragon-vector.jpg");
   background-position: 35% 30%;
   width: 8vw;
   height: 8vw;
@@ -183,7 +183,7 @@ body {
 }
 .image-col .badge {
   background-color: var(--darkcolor);
-  background-image: url("/img/badge-text.png");
+  background-image: url("./img/badge-text.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80%;
@@ -277,7 +277,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
-  background-image: url("/img/dragon-bg.png");
+  background-image: url("./img/dragon-bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -835,7 +835,7 @@ svg #wheel {
   .header-col {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/dragon-mockup.png");
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./img/dragon-mockup.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -1103,7 +1103,7 @@ svg #wheel {
   .header-col {
     height: 100vh;
     width: 100%;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("/img/dragon-mockup.png");
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("./img/dragon-mockup.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
