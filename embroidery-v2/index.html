@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Graphxsource | Embroidery Product Digitizing</title>
+    <meta name="description"
+        content="Using the latest digitizing software, our designs are hand crafted in order to provide you with high-quality detailed designs. Our logos use 10-20% less stitching then more common on-screen digitizing methods.">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/d881a614a2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./thumbnails.css">
+    <script defer src="https://code.jquery.com/jquery-3.6.1.min.js"
+        integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script src="./scripts.js" defer></script>
+</head>
+
+<body>
+
+    <section id="hero">
+        <picture>
+            <source media="(min-width: 80rem)" srcset="./img/embroidery-bg.png">
+            <source media="(max-width: 65rem)" srcset="./img/embroidery-bg-mobile.jpg">
+            <img src="./img/embroidery-bg.png" alt="Dragon Embroidery">
+        </picture>
+        <div class="info">
+            <h1 class="handwritten">Embroidery</h1>
+            <h1>Production Digitizing</h1>
+            <article>
+                <p>
+                    Using the latest digitizing software, our designs are hand crafted in order to provide you with
+                    high-quality detailed designs. Our logos use 10-20% less stitching then more common on-screen
+                    digitizing methods.
+                    <br><br>
+                    We do not use any automated features saving you time and money and improving quality. This technique
+                    results in small text second to none in the embroidery industry.
+                    <br><br>
+                    We provide sew outs on the same materials as you are embroidering. This means a reliable sample in
+                    our quality control department before your garment proceeds to production.
+                </p>
+            </article>
+            <button class="cta"><a>Scroll Down for a Demo</a></button>
+        </div>
+        <div class="badge">
+            <img src="./img/badge-text.png" alt="Badge">
+        </div>
+    </section>
+
+    <section id="tools">
+        <h4>TOOLS WE ARE EXPERT AT</h4>
+        <div class="logos">
+            <img src="./img/tajima-logo.png" alt="Tajima">
+            <img src="./img/AI-logo.png" alt="Adobe Illustrator">
+            <img src="./img/PS-logo.svg" alt="Adobe Photoshop">
+            <img src="./img/wilcom-logo.png" alt="Wilcom Embroidery">
+        </div>
+    </section>
+
+    <section id="demo">
+        <header>
+            <h1>COMPARE THE RESULTS</h1>
+            <p>Slide to compare the vector file vs. the final product.</p>
+        </header>
+
+        <main>
+            <i class="fa-solid fa-caret-left prev-icon"></i>
+            <div class="preview-box">
+                <div class="before">
+                    <img class="content-image" src="" draggable="false" alt="">
+                </div>
+                <div class="after">
+                    <img class="content-image" src="" draggable="false" alt="">
+                </div>
+                <div class="scroller">
+                    <svg class="scroller__thumb" xmlns="http://www.w3.org/2000/svg" width="100" height="100"
+                        viewBox="0 0 100 100">
+                        <polygon points="0 50 37 68 37 32 0 50" style="fill:#000" />
+                        <polygon points="100 50 64 32 64 68 100 50" style="fill:#000" />
+                    </svg>
+                </div>
+            </div>
+            <i class="fa-solid fa-caret-right next-icon"></i>
+        </main>
+
+        <footer>
+            <div class="footer-wrapper snaps-inline">
+                <img src="./img/thumbnails/wolf.png" data-embroidery="./img/emb-logos/emb-wolf.png"
+                    data-vector="./img/vector-logos/vector-wolf.png" alt="Stonebridge Wolf">
+                <img src="./img/thumbnails/grizzly.png" data-embroidery="./img/emb-logos/emb-grizzly.png"
+                    data-vector="./img/vector-logos/vector-grizzly.png" alt="The Grizzly">
+                <img src="./img/thumbnails/huskies.png" data-embroidery="./img/emb-logos/emb-huskies.png"
+                    data-vector="./img/vector-logos/vector-huskies.png" alt="Hagerty Huskies">
+                <img src="./img/thumbnails/Blue Jay.png" data-embroidery="./img/emb-logos/emb-bluejay.png"
+                    data-vector="./img/vector-logos/vector-bluejay.png" alt="Elizabethtown Blue Jay">
+                <img src="./img/thumbnails/shamrock.PNG" data-embroidery="./img/emb-logos/emb-shamrock.png"
+                    data-vector="./img/vector-logos/vector-shamrock.png" alt="Shamrock">
+                <img src="./img/thumbnails/dogs.png" data-embroidery="./img/emb-logos/emb-dogs.png"
+                    data-vector="./img/vector-logos/vector-dogs.png" alt="Nicky Tailor Dogs">
+                <img src="./img/thumbnails/hand.png" data-embroidery="./img/emb-logos/emb-hand.png"
+                    data-vector="./img/vector-logos/vector-hand.png" alt="Hang Loose">
+                <img src="./img/thumbnails/peanut.png" data-embroidery="./img/emb-logos/emb-peanut.png"
+                    data-vector="./img/vector-logos/vector-peanut.png" alt="Almond Man">
+                <img src="./img/thumbnails/bidermann.png" data-embroidery="./img/emb-logos/emb-bidermann.png"
+                    data-vector="./img/vector-logos/vector-bidermann.png" alt="Bidermann">
+                <img src="./img/thumbnails/pulaski.png" data-embroidery="./img/emb-logos/emb-pulaski.png"
+                    data-vector="./img/vector-logos/vector-pulaski.png" alt="Pulaski High School">
+                <img src="./img/thumbnails/s.png" data-embroidery="./img/emb-logos/emb-s.png"
+                    data-vector="./img/vector-logos/vector-s.png" alt="Shenandoah">
+                <img src="./img/thumbnails/turtle.png" data-embroidery="./img/emb-logos/emb-turtle.png"
+                    data-vector="./img/vector-logos/vector-turtle.png" alt="Atlantic Beach CC">
+                <img src="./img/thumbnails/eyeball.png" data-embroidery="./img/emb-logos/emb-eye.png"
+                    data-vector="./img/vector-logos/vector-eye.png" alt="Eyeball">
+                <img src="./img/thumbnails/gxs-hamburger.png" data-embroidery="./img/emb-logos/emb-hamburger.png"
+                    data-vector="./img/vector-logos/vector-hamburger.png" alt="GXS Hamburger">
+                <img src="./img/thumbnails/knight.png" data-embroidery="./img/emb-logos/emb-knight.png"
+                    data-vector="./img/vector-logos/vector-knight.png" alt="Sterling College">
+                <img src="./img/thumbnails/thursday-night.png" data-embroidery="./img/emb-logos/emb-thursdaynight.png"
+                    data-vector="./img/vector-logos/vector-thursdaynight.png" alt="Thursday Night">
+                <img src="./img/thumbnails/marylandturtle.png" data-embroidery="./img/emb-logos/emb-marylandturtle.png"
+                    data-vector="./img/vector-logos/vector-marylandturtle.png" alt="Maryland Turtle">
+                <img src="./img/thumbnails/discord.png" data-embroidery="./img/emb-logos/emb-discord.png"
+                    data-vector="./img/vector-logos/vector-discord.png" alt="Staff of Discord">
+                <img src="./img/thumbnails/warriors.png" data-embroidery="./img/emb-logos/emb-warriors.png"
+                    data-vector="./img/vector-logos/vector-warriors.png" alt="Valley Christian Warriors">
+                <img src="./img/thumbnails/flying-hare.png" data-embroidery="./img/emb-logos/emb-flyinghare.png"
+                    data-vector="./img/vector-logos/vector-flyinghare.png" alt="Flying Hare">
+                <img src="./img/thumbnails/cowboy.png" data-embroidery="./img/emb-logos/emb-cowboy.png"
+                    data-vector="./img/vector-logos/vector-cowboy.png" alt="Cowboy">
+                <img src="./img/thumbnails/hornet.png" data-embroidery="./img/emb-logos/emb-hornet.png"
+                    data-vector="./img/vector-logos/vector-hornet.png" alt="ZEE-BEE">
+                <img src="./img/thumbnails/hopyard-fox.png" data-embroidery="./img/emb-logos/emb-hopyardfox.png"
+                    data-vector="./img/vector-logos/vector-hopyardfox.png" alt="Hopyard Fox">
+                <img src="./img/thumbnails/harrisburg-tiger.png"
+                    data-embroidery="./img/emb-logos/emb-harrisburgtiger.png"
+                    data-vector="./img/vector-logos/vector-harrisburgtiger.png" alt="Harrisburg Tiger">
+                <img src="./img/thumbnails/kingturtle.png" data-embroidery="./img/emb-logos/emb-kingturtle.png"
+                    data-vector="./img/vector-logos/vector-kingturtle.png" alt="King Turtle">
+                <img src="./img/thumbnails/riot.png" data-embroidery="./img/emb-logos/emb-riot.png"
+                    data-vector="./img/vector-logos/vector-riot.png" alt="Riot">
+                <img src="./img/thumbnails/superior-grill.png" data-embroidery="./img/emb-logos/emb-superiorgrill.png"
+                    data-vector="./img/vector-logos/vector-superiorgrill.png" alt="Superior Grill">
+                <img src="./img/thumbnails/silverstein.png" data-embroidery="./img/emb-logos/emb-silverstein.png"
+                    data-vector="./img/vector-logos/vector-silverstein.png" alt="Silverstein">
+                <img src="./img/thumbnails/bulldog.png" data-embroidery="./img/emb-logos/emb-bulldog.png"
+                    data-vector="./img/vector-logos/vector-bulldog.png" alt="Bulldog">
+                <img src="./img/thumbnails/dolphins.png" data-embroidery="./img/emb-logos/emb-dolphins.png"
+                    data-vector="./img/vector-logos/vector-dolphins.png" alt="Dolphins">
+                <img src="./img/thumbnails/buccaneers.png" data-embroidery="./img/emb-logos/emb-buccaneers.png"
+                    data-vector="./img/vector-logos/vector-buccaneers.png" alt="Buccaneers">
+                <img src="./img/thumbnails/spongebob.png" data-embroidery="./img/emb-logos/emb-spongebob.png"
+                    data-vector="./img/vector-logos/vector-spongebob.png" alt="Sponge Bob">
+                <img src="./img/thumbnails/lion.png" data-embroidery="./img/emb-logos/emb-lion.png"
+                    data-vector="./img/vector-logos/vector-lion.png" alt="Abstract Lion">
+                <img src="./img/thumbnails/panther.png" data-embroidery="./img/emb-logos/emb-panther.png"
+                    data-vector="./img/vector-logos/vector-panther.png" alt="Panther">
+            </div>
+
+        </footer>
+    </section>
+
+</body>
+
+</html>
