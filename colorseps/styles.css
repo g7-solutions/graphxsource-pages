@@ -176,7 +176,7 @@ button {
 }
 #middle p span {
   padding: 1rem;
-  margin-left: 0.5rem;
+  margin-left: 1.5rem;
   border: solid 1px var(--gxs-orange);
 }
 
@@ -193,9 +193,15 @@ button {
   overflow: hidden;
 }
 #wrapper #seps-machine {
-  margin-top: -65%;
-  width: 100vw;
+  margin-top: -63%;
   transition: rotate 0.2s ease;
+}
+#wrapper #seps-machine #Machine #arm-1 image, #wrapper #seps-machine #Machine #arm-2 image, #wrapper #seps-machine #Machine #arm-3 image, #wrapper #seps-machine #Machine #arm-4 image {
+  transition: -webkit-clip-path 0.2s;
+  transition: clip-path 0.2s;
+  transition: clip-path 0.2s, -webkit-clip-path 0.2s;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
 }
 #wrapper #controls {
   width: 100%;
@@ -248,6 +254,10 @@ button {
   #middle {
     padding: 4rem;
   }
+  #wrapper #seps-machine {
+    width: 120%;
+    margin-top: -75%;
+  }
 }
 @media screen and (max-width: 80rem) {
   #hero {
@@ -297,6 +307,10 @@ button {
   #wrapper #controls .slider {
     width: 50%;
   }
+  #wrapper #seps-machine {
+    width: 150%;
+    margin-top: -95%;
+  }
 }
 @media screen and (max-width: 50rem) {
   h1 {
@@ -311,6 +325,16 @@ button {
   }
   #hero .image {
     display: none;
+  }
+  #wrapper #seps-machine {
+    width: 180%;
+    margin-top: -115%;
+  }
+}
+@media screen and (max-width: 40rem) {
+  #wrapper #seps-machine {
+    width: 300%;
+    margin-top: -180%;
   }
 }
 @-webkit-keyframes fadeIn {

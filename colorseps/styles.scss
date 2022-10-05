@@ -180,7 +180,7 @@ button {
 
     p span {
         padding: 1rem;
-        margin-left: 0.5rem;
+        margin-left: 1.5rem;
         border: solid 1px var(--gxs-orange);
     }
 }
@@ -198,9 +198,17 @@ button {
     overflow: hidden;
 
     #seps-machine{
-        margin-top: -65%;
-        width: 100vw;
+        margin-top: -63%;
         transition: rotate 0.2s ease;
+
+        #Machine{
+            #arm-1, #arm-2, #arm-3, #arm-4{
+                image{
+                    transition: clip-path 0.2s;
+                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+                }
+            }
+        }
     }
 
     #controls {
@@ -253,6 +261,10 @@ button {
     }
     #middle {
         padding: 4rem;
+    }
+    #wrapper #seps-machine{
+        width: 120%;
+        margin-top: -75%;
     }
 }
 
@@ -312,10 +324,11 @@ button {
     #wrapper #controls .slider {
         width: 50%;
     }
-}
 
-@media screen and (max-width: 65rem) {
-
+    #wrapper #seps-machine{
+        width: 150%;
+        margin-top: -95%;
+    }
 }
 
 @media screen and (max-width: 50rem) {
@@ -333,10 +346,18 @@ button {
     #hero .image {
         display: none;
     }
+
+    #wrapper #seps-machine{
+        width: 180%;
+        margin-top: -115%;
+    }
 }
 
 @media screen and (max-width: 40rem) {
-
+    #wrapper #seps-machine{
+        width: 300%;
+        margin-top: -180%;
+    }
 }
 
 @keyframes fadeIn {
