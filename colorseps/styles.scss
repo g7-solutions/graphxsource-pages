@@ -195,48 +195,12 @@ button {
     background-image: url("./img/white-texture.jpg");
     background-repeat: no-repeat;
     background-size: cover;
+    overflow: hidden;
 
-    .machine-wrapper {
-        width: 100%;
-        height: 100%;
-        position: relative;
-        overflow: hidden;
-
-        .machine {
-            position: absolute;
-            z-index: 3;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            width: 100%;
-            transform-origin: 50% 42.24%;
-            transition: all 0.3s ease;
-        }
-
-        .reveal-wrapper {
-            position: absolute;
-            display: block;
-            z-index: 4;
-            transform-origin: 50% 50%;
-            top: 28%;
-            left: 38.5%;
-            width: 23%;
-            height: 68%;
-
-            .reveal-box {
-                width: 100%;
-                height: 100%;
-                position: relative;
-
-                img {
-                    position: absolute;
-                    width: inherit;
-                    height: inherit;
-                    transition: clip-path 0.5s ease;
-                    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-                }
-            }
-        }
+    #seps-machine{
+        margin-top: -65%;
+        width: 100vw;
+        transition: rotate 0.2s ease;
     }
 
     #controls {
@@ -287,14 +251,8 @@ button {
     #hero {
         padding: 6rem;
     }
-
     #middle {
         padding: 4rem;
-    }
-
-    #wrapper .machine-wrapper .machine {
-        width: 130%;
-        left: -15%;
     }
 }
 
@@ -351,21 +309,13 @@ button {
         }
     }
 
-    #wrapper .machine-wrapper .machine {
-        width: 160%;
-        left: -30%;
-    }
-
     #wrapper #controls .slider {
         width: 50%;
     }
 }
 
 @media screen and (max-width: 65rem) {
-    #wrapper .machine-wrapper .machine {
-        width: 200%;
-        left: -50%;
-    }
+
 }
 
 @media screen and (max-width: 50rem) {
@@ -383,18 +333,10 @@ button {
     #hero .image {
         display: none;
     }
-
-    #wrapper .machine-wrapper .machine {
-        width: 250%;
-        left: -75%;
-    }
 }
 
 @media screen and (max-width: 40rem) {
-    #wrapper .machine-wrapper .machine {
-        width: 350%;
-        left: -125%;
-    }
+
 }
 
 @keyframes fadeIn {
