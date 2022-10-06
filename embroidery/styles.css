@@ -105,7 +105,8 @@ button {
 
 #hero {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: grid;
   grid-template-columns: calc(100% - 30rem) 30rem;
   grid-template-areas: "aside main";
@@ -378,6 +379,10 @@ button {
   }
   #hero {
     width: 100%;
+    min-height: 100vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     background-image: url("./img/embroidery-bg-mobile.jpg");
     background-size: cover;
     background-position: center;
@@ -392,7 +397,7 @@ button {
     width: 100%;
     text-align: center;
     align-items: center;
-    padding: 2rem;
+    padding: 4rem 2rem;
   }
   #hero .info .handwritten {
     font-size: max(6vw, 4rem);
@@ -452,7 +457,7 @@ button {
     display: none;
   }
   #hero .info p {
-    padding: 0 2rem;
+    padding: 0 1rem;
   }
   #hero .badge {
     width: 6rem;

@@ -53,17 +53,27 @@ $("body").on("touchmove", function (e) {
     scrollIt(x);
 });
 
-$("scroller").on("touchstart", function () {
-    active = true;
-    scroller.addClass("scrolling");
-});
-
-$("scroller").on("touchend", function () {
+$("body").on("touchend", function(){
     active = false;
     scroller.removeClass("scrolling");
 });
 
-$("scroller").on("touchcancel", function () {
+$("body").on("touchcancel", function(){
+    active = false;
+    scroller.removeClass("scrolling");
+});
+
+$(".scroller").on("touchstart", function () {
+    active = true;
+    scroller.addClass("scrolling");
+});
+
+$(".scroller").on("touchend", function () {
+    active = false;
+    scroller.removeClass("scrolling");
+});
+
+$(".scroller").on("touchcancel", function () {
     active = false;
     scroller.removeClass("scrolling");
 });

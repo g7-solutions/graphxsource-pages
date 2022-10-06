@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 *,
 *::before,
 *::after {
@@ -64,11 +65,14 @@ button {
 
 .wrapper {
   padding: 0 2rem;
-  height: 100vh;
+  min-height: 100vh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   gap: 1rem;
   text-align: center;
@@ -82,7 +86,7 @@ button {
           animation: backwards FadeIn 0.5s ease-in-out;
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 5em;
   color: #fafafa;
@@ -92,8 +96,8 @@ button {
           animation: backwards FadeIn 0.5s ease-in-out;
   -webkit-animation-delay: 0.4s;
           animation-delay: 0.4s;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
   font-size: 1.5em;
   color: #fafafa;
   margin-bottom: 1rem;
@@ -150,11 +154,12 @@ button {
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
+  gap: 1rem;
 }
 .wrapper #projects a div h2 {
   text-decoration: none;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 1.5em;
   color: #0a0a0a;
@@ -162,7 +167,7 @@ button {
 }
 .wrapper #projects a div p {
   text-decoration: none;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 1.1em;
   color: #0a0a0a;
@@ -173,16 +178,14 @@ button {
 }
 
 footer {
-  position: absolute;
-  margin-top: 2rem;
-  bottom: 2rem;
   width: 100%;
+  align-self: flex-end;
 }
 footer p {
   font-size: 0.8em;
   color: #5e5e5e;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  font-weight: 300;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
 }
 
 @media screen and (max-width: 50rem) {
@@ -191,7 +194,10 @@ footer p {
     padding: 4rem 2rem;
   }
   .wrapper .hero-title {
-    font-size: 10vw;
+    font-size: 9vw;
+  }
+  .wrapper .description {
+    font-size: 5vw;
   }
   .wrapper #logos img {
     max-width: 100px;
