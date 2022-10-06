@@ -199,14 +199,35 @@ button {
 
     #seps-machine{
         margin-top: -63%;
-        transition: rotate 0.2s ease;
+        transition: rotate 0.4s ease;
 
         #Machine{
             #arm-1, #arm-2, #arm-3, #arm-4{
-                image{
+                image[data-status=inactive]{
                     transition: clip-path 0.2s;
                     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
                 }
+
+                image[data-status=active]{
+                    transition: clip-path 0.2s;
+                    clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+                }
+            }
+
+            #arm-2 > image{
+                transform-origin: 82.86% 50%;
+                rotate: -90deg;
+            }
+
+            #arm-3 > image{
+                transform-origin: 50% 14.75%;
+                rotate: 180deg;
+            }
+
+            #arm-4 > image{
+                transform-origin: left center;
+                translate: 465px -335px;
+                rotate: 90deg;
             }
         }
     }

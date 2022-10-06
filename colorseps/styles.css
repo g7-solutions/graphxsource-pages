@@ -194,14 +194,34 @@ button {
 }
 #wrapper #seps-machine {
   margin-top: -63%;
-  transition: rotate 0.2s ease;
+  transition: rotate 0.4s ease;
 }
-#wrapper #seps-machine #Machine #arm-1 image, #wrapper #seps-machine #Machine #arm-2 image, #wrapper #seps-machine #Machine #arm-3 image, #wrapper #seps-machine #Machine #arm-4 image {
+#wrapper #seps-machine #Machine #arm-1 image[data-status=inactive], #wrapper #seps-machine #Machine #arm-2 image[data-status=inactive], #wrapper #seps-machine #Machine #arm-3 image[data-status=inactive], #wrapper #seps-machine #Machine #arm-4 image[data-status=inactive] {
   transition: -webkit-clip-path 0.2s;
   transition: clip-path 0.2s;
   transition: clip-path 0.2s, -webkit-clip-path 0.2s;
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+#wrapper #seps-machine #Machine #arm-1 image[data-status=active], #wrapper #seps-machine #Machine #arm-2 image[data-status=active], #wrapper #seps-machine #Machine #arm-3 image[data-status=active], #wrapper #seps-machine #Machine #arm-4 image[data-status=active] {
+  transition: -webkit-clip-path 0.2s;
+  transition: clip-path 0.2s;
+  transition: clip-path 0.2s, -webkit-clip-path 0.2s;
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+}
+#wrapper #seps-machine #Machine #arm-2 > image {
+  transform-origin: 82.86% 50%;
+  rotate: -90deg;
+}
+#wrapper #seps-machine #Machine #arm-3 > image {
+  transform-origin: 50% 14.75%;
+  rotate: 180deg;
+}
+#wrapper #seps-machine #Machine #arm-4 > image {
+  transform-origin: left center;
+  translate: 465px -335px;
+  rotate: 90deg;
 }
 #wrapper #controls {
   width: 100%;
