@@ -1,0 +1,22 @@
+.playground{
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.block{
+    width: 300px;
+    height: 500px;
+}
+
+.block:nth-child(1){
+    background-color: #c75959;
+}
+
+.block:nth-child(2){
+    background-color: #a1d42b;
+}
+
+.block:nth-child(3){
+    background-color: #2b9ed4;
+}

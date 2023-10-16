@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>GraphXSource - Front-End Developer Test</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="test.css">
+    <link rel="stylesheet" href="test2.css">
+    <link rel="stylesheet" href="test3.css">
+    <script src="backend.js" defer></script>
+</head>
+
+<body>
+    <div class="root">
+        <section class="intro">
+            <img src="img/logo.webp" class="logo"></img>
+            <h1>Back-End Developer Test</h1>
+            <p>This back-end development test is designed to assess your skills working with APIs and databases. The
+                test will evaluate your ability to identify layout issues and solve them accurately.</p>
+
+            <p>Some suggestions before you begin:</p>
+            <p>- Read the instructions carefully. <br>
+                - Using Visual Studio Code as editor is not mandatory but recommended. <br>
+                - Using the Live Server extension may help you debug your code. <br>
+                - Use Dev Tools on your browser to debug your code. <br>
+                - Make sure that you are working in the <strong>backendTest.html</strong> file. <br>
+                - Styling is not required for this test, but if you wish to style what you see, please do so. <br>
+                - The last part of the test is combined with the Front-End test, so make sure to read both instructions
+                before proceeding.
+            </p>
+            <p>If you have any questions, feel free to reach out to me at <a
+                    href="mailto:mario.pon@graphxsource.com">mario.pon@graphxsource.com</a>.</p>
+        </section>
+
+        <section class="container part-one">
+            <h2>Section 01</h2>
+            <p>This first part of the test requires working with APIs. Please connect to time API to get the current
+                time in your time zone. After that, please display said time in the clock labled <strong>Local
+                    Time.</strong> Make the time live update so that it updates every second. After that, please also
+                display the current time in <strong>Tokyo, Japan</strong> in the respective clock. Also live update this
+                clock. You will need to modify the <strong>backend.js</strong> file in this directory.</p>
+
+            <div class="container-two-col">
+                <div class="current-time">
+                    <h1>Current Time:</h1>
+                    <div class="clock" id="current-time-clock">00:00 AM</div>
+                </div>
+                <div class="tokyo-time">
+                    <h1>Tokyo Time:</h1>
+                    <div class="clock" id="tokyo-time-clock">00:00 AM</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container part-two">
+            <h2>Section 02</h2>
+            <p>
+                This part will simulate you saving data on to a database. Since we don't currently have a database we
+                will create json objects instead. <br><br>
+                The following form will have 3 inputs: <strong>Name</strong>, <strong>Age</strong>, and
+                <strong>Email</strong>. <br><br>
+                When the submit button gets clicked, 3 things should happen: <br>
+                <strong>1. </strong>We should validate the data to make sure we're not adding the same person more than
+                once. <br>
+                <strong>2. </strong>An employee ID shoudl be generated if the data is valid. <br>
+                <strong>3. </strong>We should add the data to the database. Or in our case, the json object. <br><br>
+            </p>
+
+            <div class="playground">
+                <form>
+                    <div class="labels">
+                        <label for="people">Name</label>
+                        <label for="age">Age</label>
+                        <label for="email">Email Address</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" name="name" id="name" placeholder="John Doe">
+                        <input type="number" name="age" id="age" min="18" max="99" placeholder="18">
+                        <input type="email" name="email" id="email" placeholder="your@email.com">
+                    </div>
+                    <button id="submit-btn">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="container part-three">
+            <h2>Section 03</h2>
+            <p style="margin-bottom: 2rem;">
+                For secction 03 of this test you must look at the <strong>index.html section 03.</strong> 
+            </p>
+            <h2>Good luck!</h2>
+        </section>
+        <hr>
+        <footer>
+            <p>If you have any questions, feel free to reach out to me at <a
+                    href="mailto:mario.pon@graphxsource.com">mario.pon@graphxsource.com</a><br><br>
+
+                If you have finished the test, please ZIP all the files together and send to the same email address as
+                attachment or using any file transfer method (Google Drive, Dropbox, WeTransfer, etc).
+            </p>
+        </footer>
+    </div>
+</body>
+
+</html>
